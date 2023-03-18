@@ -4,5 +4,6 @@ module.exports = {
     domains: ['www.notion.so', 'lh5.googleusercontent.com', 's3-us-west-2.amazonaws.com'],
     unoptimized: true,
     loader: 'akamai',
+    path: '',
   },
 }
