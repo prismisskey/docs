@@ -76,6 +76,7 @@ DetailPage.getLayout = function getlayout(page) {
       description: page.props.post.summary,
       type: page.props.post.type[0],
       url: `${CONFIG.link}/${page.props.post.slug}`,
+      keywords: page.props.post.keywords || CONFIG.seo.keywords.join(", "),
     }
   }
   return (
