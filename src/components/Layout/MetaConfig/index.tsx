@@ -5,11 +5,11 @@ let meta = ""
 export type MetaConfigProps = {
   title: string
   description: string
+  keywords?: string
   type: "Website" | "Post" | "Page" | string
   date?: string
   image?: string
   url: string
-  keywords?: string
 }
 
 const MetaConfig: React.FC<MetaConfigProps> = ({ ...props }) => {
