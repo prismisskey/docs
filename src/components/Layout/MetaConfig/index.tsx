@@ -8,7 +8,7 @@ export type MetaConfigProps = {
   date?: string
   image?: string
   url: string
-  keywords: string
+  keywords?: string
 }
 
 const MetaConfig: React.FC<MetaConfigProps> = ({ ...props }) => {
