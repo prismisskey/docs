@@ -1,6 +1,5 @@
 import CONFIG from "site.config"
 import Head from "next/head"
-let meta = ""
 
 export type MetaConfigProps = {
   title: string
