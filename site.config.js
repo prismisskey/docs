@@ -29,7 +29,7 @@ const CONFIG = {
   lang: "ja-JP", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
   seo: {
-    keywords: ["fedora","debian","Blog", "Website", "Notion","mattyatea","misskey","cloudflare","サーバー","さーばー","cloudflare","pages","deploy","でぷろい","デプロイ","morethan-log","vercel","ミスキー","みすきー","mattyaski","まっちゃてぃー","抹茶ティー","マニュアル","インストール","構築","インスタンス","instance","まっちゃすきー","mattyacocacora","Misskey","建て方","v13","missky","github","Misskey","サーバー","misky"],
+    keywords: ["くらうどふれあ","クラウドフレア","解説","かいせつ","仕方","やりかた","しかた","morethan-log","fedora","debian","Blog", "Website", "Notion","mattyatea","misskey","cloudflare","サーバー","さーばー","cloudflare","pages","deploy","でぷろい","デプロイ","morethan-log","vercel","ミスキー","みすきー","mattyaski","まっちゃてぃー","抹茶ティー","マニュアル","インストール","構築","インスタンス","instance","まっちゃすきー","mattyacocacora","Misskey","建て方","v13","missky","github","Misskey","サーバー","misky"],
   },
 
   // notion configuration (required)
