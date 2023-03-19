@@ -22,7 +22,7 @@ const MetaConfig: React.FC<MetaConfigProps> = ({ ...props }) => {
       <title>{meta.posts.keywords}</title>
       <meta name="robots" content="follow, index" />
       <meta charSet="UTF-8" />
-      {meta.posts.keywords ? <meta name="keywords" content={meta.keywords}/> : <meta name="keywords" content={CONFIG.seo.keywords.join(", ")} />}
+      <meta name="keywords" content={meta.keywords}/>
       <meta name="description" content={meta.description} />
       {/* og */}
       <meta property="og:type" content={meta.type} />
