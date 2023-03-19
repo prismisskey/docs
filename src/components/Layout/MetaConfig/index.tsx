@@ -4,7 +4,7 @@ import Head from "next/head"
 export type MetaConfigProps = {
   title: string
   description: string
-  keywords: string
+  keywords?: string
   type: "Website" | "Post" | "Page" | string
   date?: string
   image?: string
