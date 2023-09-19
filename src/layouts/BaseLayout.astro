@@ -13,7 +13,7 @@ const {title} = Astro.props;
 <body>
 <Navbar/>
 <div class="flex h-full content">
-    <div class="sidebar border-r p-2 w-40 border-b ">
+    <div class="sidebar border-r p-2 w-40 border-b " >
         <a href="/tos">利用規約</a>
         <br>
         <a href="/privacy-policy">プライバシーポリシー</a>
@@ -54,7 +54,15 @@ const {title} = Astro.props;
             document.querySelector('.sidebar').classList.toggle('on');
         }
     });
-
+    // スクロール時にサイドバーを追従させる
+    window.addEventListener("scroll", function () {
+        var sidebar = document.querySelector('.sidebar');
+        if (window.scrollY > 0) {
+            sidebar.style.top = window.scrollY + "px";
+        } else {
+            sidebar.style.top = "0";
+        }
+    });
     document.querySelector('.hamburger').addEventListener('click', () => {
         document.querySelector('.sidebar').classList.toggle('on');
     });
@@ -67,12 +75,15 @@ const {title} = Astro.props;
     .on {
         opacity: 1 !important;
         animation: slide .1s ease-in-out;
+        pointer-events: unset;
+
     }
 
     @media screen and (max-width: 636px) {
         .sidebar {
+            top: 0; height: 100vh;
             position: absolute;
-            left: 0;
+            pointer-events: none;
             background-color: #fff;
             transition: all 0.3s 0s ease;
         }
