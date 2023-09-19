@@ -1,0 +1,84 @@
+---
+import Navbar from "../components/navbar.astro";
+const {title} = Astro.props;
+---
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>{title}</title>
+</head>
+<body>
+<Navbar/>
+<div class="flex h-full content">
+    <div class="sidebar border-r p-2 w-40 border-b ">
+        <a href="/tos">利用規約</a>
+        <br>
+        <a href="/privacy-policy">プライバシーポリシー</a>
+    </div>
+    <div class="container p-2 ">
+
+        <slot/>
+    </div>
+</div>
+
+
+</body>
+</html>
+<script>
+    var target = document.getElementsByClassName("sidebar")[0]
+
+    function isTarget(element) {
+        if (element === target) {
+            return true;
+        }
+        if (element.parentNode) {
+            return isTarget(element.parentNode);
+        }
+        return false;
+    }
+
+    function hasOnClass(element) {
+        if (!element) {
+            return false;
+        }
+        return element.classList.contains("on");
+
+    }
+
+    document.addEventListener("touchend", function (event) {
+        var tapped = event.target;
+        if (!isTarget(tapped) && hasOnClass(target)) {
+            document.querySelector('.sidebar').classList.toggle('on');
+        }
+    });
+
+    document.querySelector('.hamburger').addEventListener('click', () => {
+        document.querySelector('.sidebar').classList.toggle('on');
+    });
+</script>
+<style>
+    a {
+        color: #00f !important
+    }
+
+    .on {
+        opacity: 1 !important;
+        animation: slide .1s ease-in-out;
+    }
+
+    @media screen and (max-width: 636px) {
+        .sidebar {
+            position: absolute;
+            left: 0;
+            background-color: #fff;
+            transition: all 0.3s 0s ease;
+        }
+
+        .sidebar {
+            opacity: 0;
+        }
+    }
+</style>

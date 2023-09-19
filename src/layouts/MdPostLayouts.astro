@@ -1,0 +1,48 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const {frontmatter} = Astro.props;
+---
+<BaseLayout title={frontmatter.title}>
+
+    <div class="flex-col">
+        <h1>{frontmatter.title}</h1>
+        <slot/>
+
+    </div>
+</BaseLayout>
+<style is:global>
+    li {
+        list-style-type: disc;
+        margin-left: 16px;
+    }
+
+    p {
+        font-weight: 400 !important;
+    }
+
+    h1 {
+        font-weight: bold !important;
+        margin: 8px 0 !important;
+        font-size: 32px !important;
+    }
+
+    h2 {
+        font-weight: bold !important;
+        margin: 8px 0 !important;
+        font-size: 24px !important;
+    }
+
+    h3 {
+        font-weight: bold !important;
+        margin: 8px 0 !important;
+        font-size: 20px !important;
+    }
+
+    a {
+        color: #00f !important
+    }
+
+    hr {
+        margin: 8px 0 !important;
+    }
+</style>
