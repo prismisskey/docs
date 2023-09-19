@@ -75,8 +75,9 @@ const {title} = Astro.props;
     .on {
         opacity: 1 !important;
         animation: slide .1s ease-in-out;
-        pointer-events: unset;
-
+        pointer-events: auto !important; /* クリックを有効にする */
+        z-index: 1000;
+        padding-top:16px;
     }
 
     @media screen and (max-width: 636px) {
