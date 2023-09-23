@@ -4,16 +4,15 @@ const {frontmatter} = Astro.props;
 ---
 <BaseLayout title={frontmatter.title}>
 
-    <div class="flex-col">
+    <div class="flex-col p-2">
         <h1>{frontmatter.title}</h1>
         <slot/>
-
     </div>
 </BaseLayout>
 <style is:global>
     li {
         list-style-type: disc;
-        margin-left: 16px;
+        margin-left: 18px;
     }
 
     p {
@@ -24,22 +23,26 @@ const {frontmatter} = Astro.props;
         font-weight: bold !important;
         margin: 8px 0 !important;
         font-size: 32px !important;
+        color: #363636;
     }
 
     h2 {
         font-weight: bold !important;
         margin: 8px 0 !important;
         font-size: 24px !important;
+        color: #363636;
     }
 
     h3 {
         font-weight: bold !important;
         margin: 8px 0 !important;
         font-size: 20px !important;
+        color: #363636;
     }
 
+
     a {
-        color: #00f !important
+        color: dodgerblue !important;
     }
 
     hr {

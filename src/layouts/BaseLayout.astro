@@ -1,29 +1,45 @@
 ---
 import Navbar from "../components/navbar.astro";
-const {title} = Astro.props;
+const {title , index} = Astro.props;
 ---
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="icon" type="image/png" href="https://files.prismisskey.space/misskey/c7e56b1d-4c4f-408f-bf73-3175f4eb26ca.png"/>
     <meta name="generator" content={Astro.generator}/>
     <title>{title}</title>
 </head>
-<body>
+<body class="w-full">
 <Navbar/>
-<div class="flex h-full content">
-    <div class="sidebar border-r p-2 w-40 border-b " >
-        <a href="/tos">利用規約</a>
+<div class="flex h-full w-full content mx-auto max-w-screen-lg">
+    {!index &&
+    <div class="sidebar border-r p-3  border-b" >
+        <a style="white-space: nowrap" href="/tos">利用規約</a>
         <br>
-        <a href="/privacy-policy">プライバシーポリシー</a>
-    </div>
-    <div class="container p-2 ">
-
-        <slot/>
-    </div>
+        <a style="white-space: nowrap" href="/privacy-policy">プライバシーポリシー</a>
+    </div>}
+    <slot/>
 </div>
 
+<style>
+    html {
+        -ms-overflow-style: none; /* IE, Edge 対応 */
+        scrollbar-width: none;    /* Firefox 対応 */
+        height: 100%;
+        color: #4f4f4f;
+        background: #fafafa;
+    }
+    a{
+        color: dodgerblue !important;
+    }
+    html::-webkit-scrollbar {
+        display: none; /* Chrome, Safari 対応 */
+    }
+    body {
+        min-height: 100%;
+    }
+    </style>
 
 </body>
 </html>
@@ -68,6 +84,7 @@ const {title} = Astro.props;
     });
 </script>
 <style>
+
     a {
         color: #00f !important
     }

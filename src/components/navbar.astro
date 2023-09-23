@@ -2,35 +2,36 @@
 
 ---
 
-<nav class="sticky top-0 w-full h-auto p-4 border-b bg-white">
-    <div class="flex">
+<nav class="sticky top-0 w-full h-auto p-4 border-b">
+    <div class="flex mx-auto max-w-screen-xl">
         <div class="hamburger">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
+            <svg class="w-8 h-7 fill-current" viewBox="0 0 24 24">
+                <path
+                        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1z"></path>
+            </svg>
         </div>
         <a style="color: black !important;" href="/"><p class="text-xl"> PrisMisskey.space</p></a></div>
-
 </nav>
 
 
 <style>
+    .mx-auto{
+        margin-left: auto;
+        margin-right: auto;
+        width: 62em;
+    }
     .hamburger {
         display: none;
     }
-
-    .hamburger .line {
-        display: block;
-        width: 30px;
-        height: 3px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        margin-right: 8px;
-        background-color: #000000;
+    .sticky {
+        background: #fafafa;
     }
-
-
     @media screen and (max-width: 636px) {
+        .flex {
+            max-width: 1200px;
+            width: 100%;
+        }
+
         .hamburger {
             display: inline;
         }
