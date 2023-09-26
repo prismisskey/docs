@@ -122,19 +122,19 @@ Not Safe For Work の略で、職場とかで見れないよ！ のような意�
   R18、または NSFW コンテンツの場合は全年齢が内容を把握できる説明文を注釈に掲載してください。
   また、当サーバーには、コンテンツアイコンというもの絵文字にあるのでご活用ください
   下記に説明する閲覧注意も忘れることなく設定してください。
-  ![cw.gif](./resource/cw.gif)
+  ![cw.gif](../../public/cw.gif)
 
 - 閲覧注意
 
   R18、または NSFW コンテンツの場合は
   上記の「内容を隠す」
   で説明されている設定の方もお忘れなくお願いします。
-  ![nsfw.gif](./resource/nsfw.gif)
+  ![nsfw.gif](../../public/nsfw.gif)
 
 - 常に閲覧注意を設定する
 
   設定からドライブを選択して頂き、以下の項目で設定ができます。
-  ![drive.gif](./resource/drive.gif)
+  ![drive.gif](../../public/drive.gif)
 
 ## ゲーミングについて
 
