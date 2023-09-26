@@ -48,7 +48,13 @@ const {frontmatter} = Astro.props;
         font-size: 20px !important;
         color: #363636;
     }
-
+    .blurr {
+        filter: blur(4px) grayscale(100%);
+        transition: filter 0.8s ease;
+    }
+    .blurr:hover {
+        filter: blur(0) grayscale(0);
+    }
     @media (prefers-color-scheme: dark) {
         h1 {
             color: #d5d5d5;
