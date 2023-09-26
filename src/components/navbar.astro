@@ -10,15 +10,21 @@
                         d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1z"></path>
             </svg>
         </div>
-        <a style="color: black !important;" href="/"><p class="text-xl"> PrisMisskey.space</p></a></div>
+        <a  href="/"><p class="text-xl"> PrisMisskey.space</p></a></div>
 </nav>
 
 
 <style>
+    p{
+        margin:0px auto !important;
+    }
+    a{
+        color: black !important;
+    }
     .mx-auto{
         margin-left: auto;
         margin-right: auto;
-        width: 62em;
+        width: 79em;
     }
     .hamburger {
         display: none;
@@ -28,12 +34,22 @@
     }
     @media screen and (max-width: 636px) {
         .flex {
-            max-width: 1200px;
+            max-width:1280px;
             width: 100%;
         }
 
         .hamburger {
             display: inline;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .sticky {
+            background-color: #121212;
+            color: #d9d9d9;
+        }
+        a{
+            color: white !important;
         }
     }
 </style>

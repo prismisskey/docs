@@ -1,45 +1,75 @@
 ---
 import Navbar from "../components/navbar.astro";
-const {title , index} = Astro.props;
+const {title, index} = Astro.props;
 ---
 <html>
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link rel="icon" type="image/png" href="https://files.prismisskey.space/misskey/c7e56b1d-4c4f-408f-bf73-3175f4eb26ca.png"/>
+    <link rel="icon" type="image/png"
+          href="https://files.prismisskey.space/misskey/c7e56b1d-4c4f-408f-bf73-3175f4eb26ca.png"/>
     <meta name="generator" content={Astro.generator}/>
     <title>{title}</title>
 </head>
 <body class="w-full">
 <Navbar/>
-<div class="flex h-full w-full content mx-auto max-w-screen-lg">
+<div class="flex h-full w-full content mx-auto max-w-screen-xl">
     {!index &&
-    <div class="sidebar border-r p-3  border-b" >
-        <a style="white-space: nowrap" href="/tos">利用規約</a>
-        <br>
-        <a style="white-space: nowrap" href="/privacy-policy">プライバシーポリシー</a>
-    </div>}
-    <slot/>
-</div>
+            <div class="sidebar border-r p-3">
+                <div class="link">
+                    <a style="white-space: nowrap" href="/tos">利用規約</a>
+                </div>
+                <br>
+                <div class="link">
+                    <a style="white-space: nowrap" href="/privacy-policy">プライバシーポリシー</a>
+                </div>
+                <br>
 
+                <div class="link">
+                    <a style="white-space: nowrap" href="/guideline">ガイドライン</a>
+                </div>
+                <br>
+                <div class="link">
+                    <a style="white-space: nowrap" href="/emoji_guideline">絵文字申請ガイドライン</a>
+                </div>
+            </div>}
+
+    <slot/>
+
+</div>
+<div style="border-top: #d5d5d5 solid 1px" class="flex p-4 border-t-8">
+    PrisMisskey.space サポート
+</div>
 <style>
     html {
         -ms-overflow-style: none; /* IE, Edge 対応 */
-        scrollbar-width: none;    /* Firefox 対応 */
+        scrollbar-width: none; /* Firefox 対応 */
         height: 100%;
         color: #4f4f4f;
         background: #fafafa;
     }
-    a{
+
+    @media (prefers-color-scheme: dark) {
+        html {
+            background-color: #121212;
+            color: #d5d5d5;
+        }
+    }
+    .link{
+        margin-top: 8px;
+    }
+    a {
         color: dodgerblue !important;
     }
+
     html::-webkit-scrollbar {
         display: none; /* Chrome, Safari 対応 */
     }
+
     body {
         min-height: 100%;
     }
-    </style>
+</style>
 
 </body>
 </html>
@@ -94,12 +124,13 @@ const {title , index} = Astro.props;
         animation: slide .1s ease-in-out;
         pointer-events: auto !important; /* クリックを有効にする */
         z-index: 1000;
-        padding-top:16px;
+        padding-top: 16px;
     }
 
     @media screen and (max-width: 636px) {
         .sidebar {
-            top: 0; height: 100vh;
+            top: 0;
+            height: 100vh;
             position: absolute;
             pointer-events: none;
             background-color: #fff;
