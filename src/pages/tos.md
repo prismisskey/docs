@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/MdPostLayouts.astro
 title: 利用規約
+latestDate: 2023/10/25
 ---
 
 Z.N(ぞぬ、ずん、ぜっと)を含むモデレーターの運営する Misskeyサーバー「PrisMisskey.space」（以下「当サービス」と定義）をご利用いただく際は、下記利用規約を基準にマナーを守ったご利用をお願いします。

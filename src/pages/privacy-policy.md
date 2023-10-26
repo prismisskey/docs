@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/MdPostLayouts.astro
 title: プライバシーポリシー
+latestDate: 2023/10/25
 ---
 
 ## 当サーバーにおけるプライバシーについて
