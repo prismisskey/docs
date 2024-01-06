@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/MdPostLayouts.astro
 title: 利用ガイドライン
-latestDate: 2024/01/09
+latestDate: 2024/01/06
 ---
 
 ## はじめに
