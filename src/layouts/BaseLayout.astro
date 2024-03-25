@@ -11,11 +11,22 @@ const {title, index} = Astro.props;
     <meta name="generator" content={Astro.generator}/>
     <title>{title}</title>
 </head>
-<body class="w-full">
-<Navbar/>
-<div class="flex h-full w-full content mx-auto max-w-screen-xl">
+
+    <link rel="preload" href="https://files.prismisskey.space/misskey/a52d0ff1-6241-4de9-9d9f-811293c27c5f.webp" as="image" />
+
+{index &&
+        <div class="background">
+            <div class="icon"/>
+        </div>}
+{!index &&
+        <a href="/">
+        <div style="height: 20vh !important;" class="background">
+            <div style=" z-index: 2; " class="icon"/>
+        </div>
+        </a>}
+<div style="min-height: 60vh;" class="flex w-full content mx-auto max-w-screen-xl">
     {!index &&
-            <div class="sidebar border-r p-3">
+            <div class="sidebar border-r p-3 ">
                 <div class="link">
                     <a style="white-space: nowrap" href="/tos">利用規約</a>
                 </div>
@@ -37,42 +48,11 @@ const {title, index} = Astro.props;
     <slot/>
 
 </div>
-<div style="border-top: #d5d5d5 solid 1px" class="flex p-4 border-t-8">
+<div style="bottom:0; border-top: #d5d5d5 solid 1px" class="flex p-4 border-t-8">
     PrisMisskey.space サポート
 </div>
-<style>
-    html {
-        -ms-overflow-style: none; /* IE, Edge 対応 */
-        scrollbar-width: none; /* Firefox 対応 */
-        height: 100%;
-        color: #4f4f4f;
-        background: #fafafa;
-    }
 
-    @media (prefers-color-scheme: dark) {
-        html {
-            background-color: #121212;
-            color: #d5d5d5;
-        }
-    }
-    .link{
-        margin-top: 8px;
-    }
-    a {
-        color: dodgerblue !important;
-    }
 
-    html::-webkit-scrollbar {
-        display: none; /* Chrome, Safari 対応 */
-    }
-
-    body {
-        min-height: 100%;
-    }
-</style>
-
-</body>
-</html>
 <script>
     var target = document.getElementsByClassName("sidebar")[0]
 
@@ -113,10 +93,77 @@ const {title, index} = Astro.props;
         document.querySelector('.sidebar').classList.toggle('on');
     });
 </script>
-<style>
 
-    a {
-        color: #00f !important
+<style>
+    .background {
+        background-image: linear-gradient(rgba(128, 128, 128, 0), rgba(128, 128, 128, 0.3)), url('https://files.prismisskey.space/misskey/7703b066-9610-4f68-9f70-05cd65dc222e.png');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        height: 60vh;
+        width: 100vw;
+        position: relative;
+        background-attachment: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .background::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: inset 0px -5px 6px 1px #fafafa;
+    }
+    .icon{
+        background-image: url('https://files.prismisskey.space/misskey/a52d0ff1-6241-4de9-9d9f-811293c27c5f.webp');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 60%;
+        animation: slide-up .6s ease-in-out;
+        pointer-events: none;
+    }
+
+    html {
+        -ms-overflow-style: none; /* IE, Edge 対応 */
+        scrollbar-width: none; /* Firefox 対応 */
+        height: 100%;
+        color: #4f4f4f;
+        background: #fafafa;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        html {
+            background-color: #121212;
+            color: #d5d5d5;
+        }
+        .background::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            box-shadow: inset 0px -5px 6px 1px #121212;
+        }
+    }
+    .link{
+        margin-top: 8px;
+    }
+
+    html::-webkit-scrollbar {
+        display: none; /* Chrome, Safari 対応 */
+    }
+
+    body {
+        min-height: 100%;
     }
 
     .on {
@@ -141,4 +188,14 @@ const {title, index} = Astro.props;
             opacity: 0;
         }
     }
+    @keyframes slide-up {
+        0% {
+            transform: translate(0%, 80%);
+        }
+        100% {
+            transform: translate(0%, 0%);
+        }
+    }
+
 </style>
+</html>

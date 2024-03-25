@@ -1,0 +1,7 @@
+---
+const {title, url} = JSON.stringify(Astro.props);
+
+---
+<div class="rounded border h-32 w-52 flex items-center justify-center relative">
+    <a class="flex absolute inset-0 items-center justify-center" href={Astro.props.url}>{Astro.props.title}</a>
+</div>
