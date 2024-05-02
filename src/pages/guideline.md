@@ -156,13 +156,36 @@ Not Safe For Work の略で、職場とかで見れないよ！ のような意�
 
 ## ゲーミングについて
 
-当サーバーでは、ゲーミング化が盛んですが、良いゲーミングと悪いゲーミングがあるので下記に例を提示します。
+当サーバーでは、ゲーミング化が盛んですが、良い例と悪い例があります。
+下記に例を提示します。
 
-悪い例：彩度の高い 速度が早い (ホバーで表示されます)
-<img class='blurr' alt="bad-gaming.gif" height="64" src="/bad-gaming.gif" width="64"/>
+・原則として1秒間に3回を超える点滅は避けてください。
+・コントラストの強い色の点滅は避けてください。
+・規則的なパターン模様（縞模様、渦巻き模様、同心円模様など)の点滅も避けてください。
+(アニメーション等の映像手法に関するガイドラインより一部引用、改変)
 
-良い例：彩度が低い 速度が低い
-<img alt="nice-gaming.gif" height="64" src="/nice-gaming.gif" width="64"/>
+引用元：https://j-ba.or.jp/category/broadcasting/jba103852
+
+
+■悪い例
+・コントラストの強い例(ホバー)
+<img class='blurr' alt="とても彩度が強い虹色がアニメーションしている画像" height="64" src="/high-contrast.gif" width="64"/>
+
+・規則的なパターンの例(ホバー)
+<img class='blurr' alt="虹色がアニメーションしていて、規則的な動きをしている画像" height="64" src="/regular-pattern.gif" width="64"/>
+<img class='blurr' alt="規則的な模様が、虹色がアニメーションしている画像" height="64" src="/regular-pattern-2.gif" width="64"/>
+
+※安全のため、彩度と速度を落としています。
+
+■いい例
+・点滅が1秒に3回を超えない例
+<img alt="彩度が弱く、点滅が激しくない、虹色にアニメーションしている画像" height="64" src="/good-gaming.gif" width="64"/>
+
+※この点滅速度を超えた場合、健康に被害が出る恐れがあり大変危険です。
+
+当ガイドラインは「アニメーション等の映像手法に関するガイドライン」を参考に作成されています。
+参考元：https://j-ba.or.jp/category/broadcasting/jba103852
+
 
 ## 自治行為について
 
