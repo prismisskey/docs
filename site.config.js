@@ -18,23 +18,23 @@ const CONFIG = {
   ],
   // blog setting (required)
   blog: {
-    title: "適当なさいと",
-    description: "よこうそ",
+    title: "PrisMisskey Docs",
+    description: "PrisMisskeyの主要なルールなどをまとめているサイトです。",
     theme: "dark", // ['light', 'dark', 'auto']
   },
 
   // CONFIG configration (required)
-  link: "https://nanasi-apps.xyz",
+  link: "https://docs.PrisMisskey.space",
   since: 2023, // If leave this empty, current year will be used.
   lang: "ja-JP", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
-  ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
+  ogImageGenerateURL: "", // The link to generate OG image, don't end with a slash
   seo: {
-    keywords: ["Blog", "Website", "Notion"],
+    keywords: [],
   },
 
   // notion configuration (required)
   notionConfig: {
-    pageId: process.env.NOTION_PAGE_ID,
+    pageId: "af09da71eeab41d796763cec3173a736",
   },
 
   // plugin configuration (optional)

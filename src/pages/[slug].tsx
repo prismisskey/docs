@@ -11,6 +11,10 @@ import { queryKey } from "src/constants/queryKey"
 import { dehydrate } from "@tanstack/react-query"
 import usePostQuery from "src/hooks/usePostQuery"
 import { FilterPostsOptions } from "src/libs/utils/notion/filterPosts"
+import LeftTab from "../routes/Feed/PostList/LeftTab";
+import {useState} from "react";
+import styled from "@emotion/styled";
+import Footer from "../routes/Feed/Footer";
 
 const filter: FilterPostsOptions = {
   acceptStatus: ["Public", "PublicOnDetail"],
@@ -53,7 +57,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 const DetailPage: NextPageWithLayout = () => {
   const post = usePostQuery()
-
+  const [q, setQ] = useState("")
   if (!post) return <CustomError />
 
   const image =
@@ -73,15 +77,69 @@ const DetailPage: NextPageWithLayout = () => {
   }
 
   return (
-    <>
-      <MetaConfig {...meta} />
-      <Detail />
-    </>
+      <StyledWrapper>
+        <div
+            className="lt"
+            css={{
+              height: `calc(100vh - cpx)`,
+            }}
+        >
+          <LeftTab q={q}/>
+        </div>
+        <div className="mid">
+          <MetaConfig {...meta} />
+          <Detail/>
+          <div className="footer">
+            <Footer/>
+          </div>
+        </div>
+
+      </StyledWrapper>
   )
 }
 
 DetailPage.getLayout = (page) => {
   return <>{page}</>
 }
+const StyledWrapper = styled.div`
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+
+  padding: 2rem 0;
+  display: grid;
+  gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  > .lt {
+    display: none;
+    overflow: scroll;
+    position: sticky;
+    grid-column: span 2 / span 2;
+    top: 63px;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
+  }
+
+  > .mid {
+    grid-column: span 12 / span 12;
+
+    @media (min-width: 1024px) {
+      grid-column: span 10 / span 10;
+    }
+    
+  }
+  
+`
 
 export default DetailPage
